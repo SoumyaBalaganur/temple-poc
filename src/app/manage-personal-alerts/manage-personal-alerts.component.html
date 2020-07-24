@@ -1,0 +1,70 @@
+<div style="padding-bottom: 100px; position: relative;">
+  <section id="welcome">
+    <div class="container" style="justify-content: space-between; align-items: center;">
+      <h1>Welcome Jeff!</h1>
+      <button style="height: 2.5rem;" class="button" mat-stroked-button [routerLink]="'/content-idea/create'">Create Content Idea</button>
+    </div>
+  </section> 
+  <section id="">
+    <div class="container ">
+      <div class="table-custom">
+        <div class="manage-alert-head">
+          <div class="table-title">Manage Personal Alerts</div>
+          <div class="table-btn">
+             <a href="#"  [routerLink]="'/manage-personal/manage-personal-add'">Create a New Personal Alert</a>
+             <a href="#" [routerLink]="'/manage-personal/manage-personal-edit'">Edit</a>
+             <a href="#">Delete</a>
+          </div>
+        </div>
+        <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8" style="width: 100%;"> 
+          <!-- Position Column -->
+          <ng-container matColumnDef='Alert Name'>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Alert Name</th>
+            <td mat-cell *matCellDef="let element" matColumnDef="select"> {{element['Alert Name']}} </td>
+          </ng-container>
+        
+          <!-- Name Column -->
+          <ng-container matColumnDef='Platform'>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Platform </th>
+            <td mat-cell *matCellDef="let element"> {{element['Platform']}} </td>
+          </ng-container>
+        
+          <!-- Weight Column -->
+          <ng-container matColumnDef="Strategy">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Strategy </th>
+            <td mat-cell *matCellDef="let element"> {{element['Strategy']}} </td>
+          </ng-container>
+        
+          <!-- Symbol Column -->
+          <ng-container matColumnDef='Product'>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Product </th>
+            <td mat-cell *matCellDef="let element"> {{element['Product']}} </td>
+          </ng-container>
+             
+          <ng-container matColumnDef="Alert Type">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header style="min-width: 50px;"> Alert Type </th>
+            <td mat-cell *matCellDef="let element"> {{element['Alert Type']}} </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="Threshold">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Threshold </th>
+            <td mat-cell *matCellDef="let element"> {{element['Threshold']}} </td>
+          </ng-container>
+        
+          <ng-container matColumnDef="Notify">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Notify </th>
+            <td mat-cell *matCellDef="let element"> {{element['Notify']}} </td>
+          </ng-container>
+        
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+      </div>
+      
+      
+    </div>
+  </section>
+</div>
+

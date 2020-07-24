@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+
+.button {
+  width: 10rem;
+  background-color: #4472c4;
+  font-size: 18px;
+}
+
+.button span {
+  color: white;
+}
+
+#lineage .node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 3px;
+}
+
+#lineage .node text {
+  font: 14px sans-serif;
+}
+
+#lineage .link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 2px;
+}
+
+#lineage svg {
+  overflow: visible;
+}
+
+.container {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  /* width: 200px; */
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica,
+    sans-serif;
+}

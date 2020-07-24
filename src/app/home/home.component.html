@@ -1,0 +1,34 @@
+<div style="padding-bottom: 100px; position: relative;">
+  <section id="welcome">
+    <div class="container" style="justify-content: space-between; align-items: center;">
+      <h1>Welcome Jeff!</h1>
+      <button style="height: 2.5rem;" class="button" mat-stroked-button [routerLink]="'/content-idea/create'">Create Content Idea</button>
+    </div>
+  </section>
+  <section id="lineage-section" style="display: flex; flex-direction: column; align-items: center;">
+    <h3 style="text-align: center; color: #4472c4;">Global Product Management</h3>
+    <div class="container" style="flex-direction: column; border: 1px solid #000;">
+      <!-- <h2 style="text-align: center; height: 2rem" (click)="handleShowLineage()">Lineage</h2> -->
+      <!-- <app-lineage style="width: 100%" *ngIf="showLineage "></app-lineage> -->
+      <app-lineage style="width: 100%; margin-top: 1rem;"></app-lineage>
+    </div>
+  </section>
+  <section id="graphs">
+    <div class="container">
+      <div style="width: 100%;">
+        <app-team-wise-chart ></app-team-wise-chart>
+      </div>
+      <div style="width: 100%;">
+        <app-region-wise-chart ></app-region-wise-chart>
+      </div>
+      <div style="width: 100%;">
+        <app-usability-wise-chart></app-usability-wise-chart>
+      </div>
+    </div>
+  </section>
+  <section id="table">
+    <div class="container">
+      <app-gpm-table style="width: 100%;"></app-gpm-table>
+    </div>
+  </section>
+</div>

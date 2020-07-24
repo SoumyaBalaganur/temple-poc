@@ -1,0 +1,12 @@
+<div style="width: 100%; display: flex; justify-content: center;">
+    <mat-form-field style="width: 18rem;">
+        <!-- placeholder="Global Product Management"  -->
+        <mat-select [(ngModel)]="gpm" (selectionChange)="filterData()">
+            <mat-option *ngFor="let item of allGPM" [value]="item.value">
+              {{item.label}}
+            </mat-option>
+          </mat-select>
+    </mat-form-field>
+</div>
+<div id="lineage" #tree style="justify-content: center; display: flex;"></div>
+<!-- <link rel="import" href="tree.html"> -->
